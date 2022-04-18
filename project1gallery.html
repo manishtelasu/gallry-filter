@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gallery</title>
+
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="project1gallery.css">
+	 <link rel="stylesheet" type="text/css" href="https:/stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<header>
+	<nav><div class="logo">
+		photo<span>pix</span> </div>
+
+		<div class="menu">
+		<a href="#">Home</a>
+		<a href="#">Gallery</a>
+        <a href="#">About</a>  
+        <a href="#">Contact</a>
+	</div>
+	<div class="icon"><i class="fa  fa-search"></i>
+		              <a href="#">Login</a>
+	</div>
+</nav>
+<section class="h-text">
+	<i class="fa fa-camera" id="camera"></i>
+	<h1 data-aos="fade-up">capturing the moment that captivate your heart</h1>
+	<input type="" placeholder="search here">
+	<button><i class="fa fa-search"></i></button>
+
+
+</section>
+</header>
+<section class="filter-gallery">
+	<div class="portfolio-menu">
+		<ul>
+			<li class="active" data-filter="*">All</li>
+             <li data-filter=".nature">Nature</li>
+             <li data-filter=".faishon">Faishon</li>
+             <li data-filter=".Wedding">Wedding</li>
+
+
+
+
+		</ul>
+	</div>
+
+
+	<div class="portfolio-item">
+		<div class="item nature" data-aos="flip-left" data-aos-offset="100" data-aos-delay="100">
+			<img src="image/p1.jpg" width="100" height="100">
+			
+
+		</div>
+
+		<div class="item faishon" data-aos="flip-left" data-aos-offset="100" data-aos-delay="200">
+			<img src="image/p2.jpg" width="100" height="100">
+			
+
+		</div>
+		<div class="item Wedding"data-aos="flip-left" data-aos-offset="100" data-aos-delay="300">
+			<img src="image/p3.jpg" width="100" height="100">
+			
+
+		</div>
+           <div class="item nature"data-aos="zoom-in" data-aos-offset="100" data-aos-delay="100">
+			<img src="image/p4.jpg" width="100" height="100">
+			</div>
+
+		<div class="item faishon"data-aos="zoom-in" data-aos-offset="100" data-aos-delay="200">
+			<img src="image/p5.jpg" width="100" height="100">
+			
+
+		</div>
+		<div class="item Wedding"data-aos="zoom-in" data-aos-offset="100" data-aos-delay="300">
+			<img src="image/p6.jpg" width="100" height="100">
+			
+
+		</div>
+
+<div class="item nature"
+data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="100">
+			<img src="image/p7.jpg" width="100" height="100">
+			
+
+		</div>
+
+		<div class="item faishon" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="200">
+			<img src="image/p8.jpg" width="100" height="100">
+			
+
+		</div>
+		<div class="item Wedding" data-aos="zoom-in-up" data-aos-offset="100" data-aos-delay="300">
+			<img src="image/p9.jpg" width="100" height="100">
+			
+
+		</div>
+
+	
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script type="text/javascript">
+	$('.portfolio-item').isotope({
+  // options
+  itemSelector: '.item',
+  layoutMode: 'fitRows'
+});      
+         $('.portfolio-menu ul li').click(function(){
+          $('.portfolio-menu ul li').removeClass('active');
+          $(this).addClass('active');
+          
+          
+          var selector=$(this).attr('data-filter');
+          $('.portfolio-item').isotope({
+              filter:selector
+
+          });
+          return false;
+      });
+
+
+
+
+</script>
+
+</div>
+</section>
+
+
+<section class="member">
+	<div class="member-info">
+		<h1>Our <span>Information</span></h1>
+<p>what our member says</p>
+
+	</div>
+	<div class="member-card">
+		<img src="image/member.png">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore</p>
+
+		<h2>* Maria sharapove</h2>
+		<img src="image/icon1.png" width="100">
+		<img src="image/icon2.png" width="100">
+		<img src="image/icon3.png" width="100">
+		<img src="image/icon4.png" width="100">
+	</div>
+
+<div class="m-images">
+  <img src="image/s1.jpg">
+   <img src="image/s2.jpg">
+ <img src="image/s3.jpg">
+  <img src="image/s4.jpg">
+   <img src="image/s5.jpg">
+    <img src="image/s6.jpg">
+</div>
+</section>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
